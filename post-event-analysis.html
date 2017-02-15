@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>EY CASH: Post Event Analysis</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+					
+		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+		<link href="lib/fixed-table/css/fixed_table_rc.css" rel="stylesheet" type="text/css">
+
+	    <!-- Custom Fonts -->
+	    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+		<!-- Local stylesheet -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+
+		<!-- user options nav -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="btn-group user-options" role="group">
+					<div class="pull-right">
+						<div class="btn-group" role="group">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Janelle Li - Major Tom Food Brands <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</div>
+						<button class="btn btn-info btn-danger"><span class="fa fa-bell"></span> | 12</button>
+					</div>
+				</div>
+				<!-- site navigation -->
+				<div class="mainnav clearfix">
+					<h2 class="container-fluid"><a href="landing.html"><img src="images/EYCash_logo.svg" alt="EY CASH"></a></h2>
+					<button class="btn btn-custom btn-menu" type="button" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu"><span></span></button>
+					<ul class="list-group collapse" id="collapseMenu">
+						<li class="list-group-item"><a href="commercial-snapshot.html">Commercial Snapshot</a></li>
+						<li class="list-group-item"><a href="growth-drivers.html">Growth Drivers</a></li>
+						<li class="list-group-item">
+							<button class="btn btn-submenu" type="button" data-toggle="collapse" data-target="#collapseSubmenu" aria-expanded="false" aria-controls="collapseSubmenu">Revenue Growth Management</button>
+							<div class="list-group collapse" id="collapseSubmenu">
+								<a href="price-diagnostic.html" class="list-group-item">Price Diagnostic</a>
+								<a href="pricing-simulation.html" class="list-group-item">Pricing Simulation</a>
+								<a href="post-event-analysis.html" class="list-group-item">Post Event Analysis</a>
+								<a href="trade-promotion-opt.html" class="list-group-item">Trade Promotion Optimization</a>
+								
+							</div> 
+						</li>
+						<li class="list-group-item"><a href="marketing-productivity.html">Marketing Productivity</a></li>
+						<li class="list-group-item"><a href="retail-execution.html">Retail Execution</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- section title area -->
+		<div class="jumbotron">
+			<div class="container-fluid">
+				<ul class="nav nav-pills">
+					<li role="presentation">Revenue Growth Management &nbsp;&nbsp;&gt;</li>
+					<li role="presentation"><a href="price-diagnostic.html">Price Diagnostic</a></li>
+					<li role="presentation"><a href="pricing-simulation.html">Pricing Simulation</a></li>
+					<li role="presentation" class="active"><a href="post-event-analysis.html">Post Event Analysis</a></li>
+					<li role="presentation"><a href="trade-promotion-opt.html">Trade Promotion Optimization</a></li>
+					
+				</ul>
+				<h1>Post Event Analysis</h1>
+				<div class="pull-right">
+					<span class="fa fa-file-text"></span> <span class="fa fa-download"></span> <span class="fa fa-share-alt"></span>
+				</div>
+			</div>
+			<div class="btn-group btn-group-justified filtersbtn-group btn-group-justified filters hidden-xs">
+				<div class="btn-group">
+					<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Country</span><b id="result1">- Select One -</b><span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" data-id="result1">
+						<li><a href="#">USA</a></li>
+						<li><a href="#">UK</a></li>
+						<li><a href="#">Germany</a></li>
+						<li><a href="#">China</a></li>
+						<li><a href="#">France</a></li>
+						<li><a href="#">Australia</a></li>
+						<li><a href="#">Brazil</a></li>
+						<li><a href="#">Canada</a></li>
+						<li><a href="#">Russia</a></li>
+					</ul>
+				</div>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Category</span><b id="result2">- Select One -</b> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" data-id="result2">
+						<li><a href="#">Chips</a></li>
+						<li><a href="#">Cookie</a></li>
+						<li><a href="#">Gum</a></li>
+						<li><a href="#">Chocolate</a></li>
+						<li><a href="#">Drink</a></li>
+					</ul>
+				</div>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Channel</span><b id="result3">- Select One -</b> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" data-id="result3">
+						<li><a href="#">Grocery</a></li>
+						<!--li><a href="#">Drug</a></li>
+						<li><a href="#">Mass Channel</a></li-->
+					</ul>
+				</div>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Retailer</span><b id="result4">- Select One -</b> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" data-id="result4">
+						<li><a href="#">Bop &amp; Shop</a></li>
+						<li><a href="#">Johnny Brothers</a></li>
+						<li><a href="#">Robby's General Store</a></li>
+					</ul>
+				</div>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">PPG</span><b id="result5">- Select One -</b><span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" data-id="result5">
+						<li><a href="#">Chips Baked 16 oz</a></li>
+						<li><a href="#">Chips Roasted 20 oz</a></li>
+						<li><a href="#">Chips Family Size 25 oz</a></li>
+						<!--li><a href="#">Fruit Mix Drink 25 oz</a></li>
+						<li><a href="#">Cookie Family Size 45 oz</a></li>
+						<li><a href="#">Chocolate Bar 15 oz</a></li>
+						<li><a href="#">Chocolate Crispy 16 oz </a></li-->
+					</ul>
+				</div>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-custom dropdown-toggle collapsed" data-toggle="collapse" data-target="#dateRangePicker" aria-expanded="false" aria-controls="dateRangePicker"><span class="small">Date Range Selector</span>&nbsp;<span class="hidden picked-date"><b>01/07/2015 - 06/20/2015</b></span><span class="caret"></span>
+							</button>
+							<div class="collapse" id="dateRangePicker">
+								<table class="table table-bordered table-compact mini-calendar" id="date-from">
+									<thead>
+									<tr>
+									<th colspan="7">Jan 2015</th>
+									</tr>
+									<tr>
+									<td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+									</tr>
+									<tr>
+									<td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+									</tr>
+									<tr>
+									<td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+									</tr>
+									<tr>
+									<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+									</tr>
+									<tr>
+									<td>29</td><td>30</td><td>31</td>
+									</tr>
+									</tbody>
+								</table>
+								<span class="fa fa-chevron-right"></span>
+								<table class="table table-bordered table-compact mini-calendar" id="date-to">
+									<thead>
+									<tr>
+									<th colspan="7">Dec 2015</th>
+									</tr>
+									<tr>
+									<td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+									<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+									</tr>
+									<tr>
+									<td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+									</tr>
+									<tr>
+									<td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+									</tr>
+									<tr>
+									<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+									</tr>
+									<tr>
+									<td>29</td><td>30</td><td>31</td>
+									</tr>
+									</tbody>
+								</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main container-fluid ft">
+			<div class="report">
+				<div class="row">
+					<div class="col col-xs-12">
+						<div class="panel panel-default content-card">
+							<iframe width="1280" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiN2RhYmZiMDQtNWIxZS00NzI2LTliODMtODRmZTYxMGVmOGYyIiwidCI6ImJlNjM3MzRhLTk2YzUtNGU1NC04MDQ5LTcyYjZhZTEwZTM1NiIsImMiOjZ9" frameborder="0" allowfullscreen="true"></iframe> 					
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-xs-12">
+						<table id="postEventFreezeTableEmpty">
+							<thead>
+								<tr>
+									<th>Event Description (Based on Duracell Promo Calendars) </th>
+									<th>Display Bn$$n Mega Event TPR 5.99</th>
+									<th>Display None Feature 5.99</th>
+									<th>Display None TPR 5.99</th>
+									<th>Roller None TPR 5.99</th>
+									<th>Display None Feature 5.99</th>
+									<th>Display None TPR 5.99</th>
+									<th>Display None TPR 5.99</th>
+									<th>Display None Feature 5.99</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td><strong>Start Date</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>End Date</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duration (Weeks)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Baseline Consumption Units</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<!--<tr><td><strong></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								--><tr><td><strong>ePOS/Consumption Retail Sales Volume (Units)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>ePOS/Consumption Retail Sales Revenue ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>List Price to retailer per unit</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Everyday spend per unit</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Base/Everyday Price per Unit ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Promoted Price to Retailer ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Base/Everyday Price to Consumer ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Promoted Price to Consumer ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% Price Discount to Consumer</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% ACV TPR (wtd)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% ACV Feature (wtd)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% ACV Display (wtd)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% ACV Feature & Display (wtd)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% $ Revenue Sold on TPR</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% $ Revenue Sold on Feature</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% $ Revenue Sold on Display</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% $ Revenue Sold on Feature & Display</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Other Causals (e.g., Shopper Mktg, New Prd Intros)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Variable Event Cost ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Fixed Event Cost ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Other Event Cost (GNS,SM) ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Total Event Cost ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Key Performance Indicators (KPIs)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell ROI %</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Event % Sales Uplift</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Incremental Volume (Units)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Incremental Revenue ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Incremental Gross Profit ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Less Cannibalization Units (Halo) (Units)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Plus Forward Buy (Pantry Loading) (Units)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Less Competitive Impact (Units)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Event Actual ROI (%)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Event Actual Sales Uplift (%)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Actual Incremental Volume (Units)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Actual Incremental Revenue ($) </strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Duracell Actual Incremental Profit ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Cost per Incremental Unit (Vol)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Cost per Incremental Dollar (Rev)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Profit per Incremental Unit ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>% Trade Pass-Thru (%)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Retailer Promo Margin(%)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Retailer Incremental Revenue ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Retailer Incremental Profit ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Incremental Consumption Units</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>PPG Gross Margin($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>PPG Fross Margin (%)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Floor Price ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Net Unit Cost($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Retailer Net Unit Cost ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Scan Amount ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<tr><td><strong>Scan Dollars ($)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><!--&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>-->
+								<!--<tr><td><strong>Less Cannibalization Units (Halo) * (2)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Less Forward Buy (Pantry Loading) * (2)</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Mechanic</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong># of Tactics</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Period</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Period ROI%</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Duration ROI%</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Mechanic ROI%</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong># of Tactics ROI%</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+								<tr><td><strong>Revenue for ROI Calculations</strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td></td></tr>-->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="report invisible">
+				<div class="row">
+					<div class="col col-xs-12">
+						<div class="panel panel-default content-card">
+							<iframe width="1280" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzlmMjZmNzktZWVhNi00M2M1LTg0ZWEtMGViNWExMTM4MWVjIiwidCI6ImJlNjM3MzRhLTk2YzUtNGU1NC04MDQ5LTcyYjZhZTEwZTM1NiIsImMiOjZ9" frameborder="0" allowfullscreen="true"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-xs-12">
+						<table id="postEventFreezeTableFilled">
+							<thead>
+							<tr>
+							<th>Event Description (Based on Duracell Promo Calendars)</th>
+							<th>Display Bnn$$n Mega Event TPR 5.99</th>
+							<th>Display None Feature 5.99</th>
+							<th>Display None TPR 5.99</th>
+							<th>Roller None TPR 5.99</th>
+							<th>Display None Feature 5.99</th>
+							<th>Display None TPR 5.99</th>
+							<th>Display None TPR 5.99</th>
+							<th>Display None Feature 5.99</th>
+							<!--<th>Super event, back to school super sale digital</th>
+							<th>Super event, back to school super sale digital</th>
+							<th>feature, 10/$10 sale, promoted price</th>
+							<th>feature, price &amp; item event</th>
+							<th>share builder, holiday/christmas</th>
+							<th>Super event, daytona Super; valentine's day selling</th>
+							<th>digital coupon, summer lockdown</th>
+							<th>share builder, b4s4 Super; 10/$10</th>
+							<th>Super event, daytona Super b6s3; july 4th selling</th>
+							<th>feature, 10/$10; chips new style</th>
+							<th>digital coupon, bts digital coupon event</th>
+							<th>feature, 10/$10; private selection</th>-->
+							</tr>
+							</thead>
+							<tbody>
+							 <tr><td><strong>Start Date</strong></td><td>2</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>5</td><td>2</td><td>1</td><td>3</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
+							 <tr><td><strong>Duration (Weeks)</strong></td><td>2</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>5</td><td>2</td><td>1</td><td>3</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
+							 <tr><td><strong>Duration (Weeks)</strong></td><td>2</td><td>2</td><td>2</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>5</td><td>2</td><td>1</td><td>3</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
+ <tr><td><strong>Baseline Consumption Units</strong></td><td> 40,012 </td><td> 43,007 </td><td> 35,457 </td><td> 26,693 </td><td> 363,254 </td><td> 386,545 </td><td> 372,792 </td><td> 438,304 </td><td> 165,954 </td><td> 172,122 </td><td> 152,965 </td><td> 287,804 </td><td> 603,751 </td><td> 332,062 </td><td> 191,888 </td><td> 594,684 </td><td> 492,430 </td><td> 220,918 </td><td> 396,224 </td><td> 164,860 </td></tr>
+ <tr><td><strong>ePOS/Consumption Retail Sales Volume (Units)</strong></td><td> 55,675 </td><td> 63,672 </td><td> 65,081 </td><td> 33,929 </td><td> 838,556 </td><td> 924,971 </td><td> 519,269 </td><td> 663,729 </td><td> 265,675 </td><td> 281,122 </td><td> 197,324 </td><td> 800,274 </td><td> 1,586,273 </td><td> 735,370 </td><td> 464,138 </td><td> 1,788,941 </td><td> 781,292 </td><td> 276,360 </td><td> 554,196 </td><td> 208,147 </td></tr>
+ <tr><td><strong>ePOS/Consumption Retail Sales Revenue ($)</strong></td><td> 201,834 </td><td> 226,839 </td><td> 226,670 </td><td> 128,592 </td><td> 1,926,625 </td><td> 2,059,370 </td><td> 1,282,769 </td><td> 1,560,238 </td><td> 680,450 </td><td> 685,155 </td><td> 518,176 </td><td> 1,651,476 </td><td> 3,243,508 </td><td> 1,655,399 </td><td> 952,310 </td><td> 3,547,628 </td><td> 1,816,068 </td><td> 727,866 </td><td> 1,388,677 </td><td> 546,970 </td></tr>
+ <tr><td><strong>List Price to retailer per unit</strong></td><td> 3.47 </td><td> 3.47 </td><td> 3.47 </td><td> 3.47 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td><td> 2.81 </td></tr>
+ <tr><td><strong>Everyday spend per unit</strong></td><td> 0.40 </td><td> 0.40 </td><td> 0.40 </td><td> 0.40 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td><td> 0.32 </td></tr>
+ <tr><td><strong>Base/Everyday Price per Unit ($)</strong></td><td> 3.07 </td><td> 3.07 </td><td> 3.07 </td><td> 3.07 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td><td> 2.49 </td></tr>
+ <tr><td><strong>Promoted Price to Retailer ($)</strong></td><td> 1.74 </td><td> 2.64 </td><td> 2.47 </td><td> 2.73 </td><td> 1.72 </td><td> 1.62 </td><td> 2.00 </td><td> 1.75 </td><td> 1.90 </td><td> 1.90 </td><td> 2.00 </td><td> 1.54 </td><td> 1.60 </td><td> 1.77 </td><td> 1.35 </td><td> 1.60 </td><td> 1.73 </td><td> 2.00 </td><td> 1.79 </td><td> 2.00 </td></tr>
+ <tr><td><strong>Base/Everyday Price to Consumer ($)</strong></td><td> 4.08 </td><td> 4.09 </td><td> 4.22 </td><td> 4.00 </td><td> 2.79 </td><td> 2.89 </td><td> 2.78 </td><td> 2.76 </td><td> 2.78 </td><td> 2.78 </td><td> 2.79 </td><td> 2.80 </td><td> 2.79 </td><td> 2.78 </td><td> 2.80 </td><td> 2.80 </td><td> 2.70 </td><td> 2.79 </td><td> 2.79 </td><td> 2.79 </td></tr>
+ <tr><td><strong>Promoted Price to Consumer ($)</strong></td><td> 3.63 </td><td> 3.56 </td><td> 3.48 </td><td> 3.79 </td><td> 2.29 </td><td> 2.22 </td><td> 2.47 </td><td> 2.35 </td><td> 2.56 </td><td> 2.44 </td><td> 2.63 </td><td> 2.06 </td><td> 2.04 </td><td> 2.25 </td><td> 2.05 </td><td> 1.99 </td><td> 2.33 </td><td> 2.63 </td><td> 2.51 </td><td> 2.63 </td></tr>
+ <tr><td><strong>% Price Discount to Consumer</strong></td><td>11%</td><td>13%</td><td>18%</td><td>5%</td><td>18%</td><td>23%</td><td>11%</td><td>15%</td><td>8%</td><td>12%</td><td>6%</td><td>26%</td><td>27%</td><td>19%</td><td>27%</td><td>29%</td><td>14%</td><td>6%</td><td>10%</td><td>6%</td></tr>
+ <tr><td><strong>% ACV TPR (wtd)</strong></td><td>74%</td><td>86%</td><td>94%</td><td>13%</td><td>14%</td><td>57%</td><td>60%</td><td>68%</td><td>96%</td><td>76%</td><td>42%</td><td>74%</td><td>73%</td><td>62%</td><td>12%</td><td>17%</td><td>2%</td><td>11%</td><td>11%</td><td>12%</td></tr>
+ <tr><td><strong>% ACV Feature (wtd)</strong></td><td>0%</td><td>0%</td><td>0%</td><td>75%</td><td>93%</td><td>93%</td><td>89%</td><td>93%</td><td>0%</td><td>97%</td><td>81%</td><td>94%</td><td>79%</td><td>51%</td><td>90%</td><td>85%</td><td>99%</td><td>80%</td><td>90%</td><td>88%</td></tr>
+ <tr><td><strong>% ACV Display (wtd)</strong></td><td>13%</td><td>9%</td><td>3%</td><td>1%</td><td>37%</td><td>34%</td><td>16%</td><td>6%</td><td>41%</td><td>20%</td><td>8%</td><td>8%</td><td>14%</td><td>43%</td><td>10%</td><td>15%</td><td>1%</td><td>5%</td><td>2%</td><td>2%</td></tr>
+ <tr><td><strong>% ACV Feature & Display (wtd)</strong></td><td>0%</td><td>0%</td><td>0%</td><td>14%</td><td>81%</td><td>72%</td><td>73%</td><td>46%</td><td>0%</td><td>43%</td><td>25%</td><td>58%</td><td>60%</td><td>39%</td><td>80%</td><td>81%</td><td>74%</td><td>54%</td><td>69%</td><td>38%</td></tr>
+ <tr><td><strong>% $ Revenue Sold on TPR</strong></td><td>78%</td><td>85%</td><td>97%</td><td>10%</td><td>2%</td><td>3%</td><td>5%</td><td>5%</td><td>70%</td><td>16%</td><td>7%</td><td>3%</td><td>12%</td><td>17%</td><td>2%</td><td>3%</td><td>0%</td><td>5%</td><td>4%</td><td>6%</td></tr>
+ <tr><td><strong>% $ Revenue Sold on Feature</strong></td><td>0%</td><td>0%</td><td>0%</td><td>70%</td><td>28%</td><td>46%</td><td>43%</td><td>61%</td><td>0%</td><td>51%</td><td>72%</td><td>53%</td><td>37%</td><td>25%</td><td>32%</td><td>24%</td><td>53%</td><td>51%</td><td>48%</td><td>73%</td></tr>
+ <tr><td><strong>% $ Revenue Sold on Display</strong></td><td>22%</td><td>15%</td><td>3%</td><td>1%</td><td>8%</td><td>3%</td><td>3%</td><td>1%</td><td>30%</td><td>11%</td><td>4%</td><td>1%</td><td>8%</td><td>30%</td><td>3%</td><td>8%</td><td>0%</td><td>1%</td><td>1%</td><td>0%</td></tr>
+ <tr><td><strong>% $ Revenue Sold on Feature & Display</strong></td><td>0%</td><td>0%</td><td>0%</td><td>19%</td><td>62%</td><td>48%</td><td>49%</td><td>33%</td><td>0%</td><td>22%</td><td>17%</td><td>43%</td><td>44%</td><td>28%</td><td>62%</td><td>65%</td><td>46%</td><td>43%</td><td>47%</td><td>20%</td></tr>
+ <tr><td><strong>Other Causals (e.g., Shopper Mktg, New Prd Intros)</strong></td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td><td>  </td></tr>
+ <tr><td><strong>Variable Event Cost ($)</strong></td><td> 42,870 </td><td> -   </td><td> -   </td><td> 11,535.86 </td><td> 410,892.44 </td><td> 212,743.33 </td><td> 254,441.81 </td><td> 325,227.21 </td><td> 130,180.75 </td><td> 137,749.78 </td><td> 96,688.76 </td><td> 712,243.86 </td><td> 1,411,782.97 </td><td> 360,331.30 </td><td> 413,082.65 </td><td> 1,592,157.12 </td><td> 382,833.01 </td><td> 135,416.40 </td><td> 271,556.04 </td><td> 101,992.03 </td></tr>
+ <tr><td><strong>Fixed Event Cost ($)</strong></td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td><td> -   </td></tr>
+ <tr><td><strong>Other Event Cost (GNS,SM) ($)</strong></td><td> 31,019 </td><td> 27,205 </td><td> 38,787 </td><td> -   </td><td> 235,248 </td><td> 594,036 </td><td> -   </td><td> 163,934 </td><td> 26,001 </td><td> 27,062 </td><td> -   </td><td> 50,000 </td><td> -   </td><td> 171,360 </td><td> 117,935 </td><td> -   </td><td> 213,742 </td><td> -   </td><td> 115,797 </td><td> -   </td></tr>
+ <tr><td><strong>Total Event Cost ($)</strong></td><td> 73,889 </td><td> 27,205 </td><td> 38,787 </td><td> 11,536 </td><td> 646,140 </td><td> 806,779 </td><td> 254,442 </td><td> 489,161 </td><td> 156,181 </td><td> 164,812 </td><td> 96,689 </td><td> 762,244 </td><td> 1,411,783 </td><td> 531,691 </td><td> 531,018 </td><td> 1,592,157 </td><td> 596,575 </td><td> 135,416 </td><td> 387,353 </td><td> 101,992 </td></tr>
+ <tr><td class="gradeC"><strong>Key Performance Indicators (KPIs)</strong></td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td><td class="gradeC">&nbsp;</td></tr>
+ <tr><td><strong>Manufacturer Event ROI %</strong></td><td>-52%</td><td>71%</td><td>72%</td><td>41%</td><td>41%</td><td>28%</td><td>10%</td><td>-12%</td><td>22%</td><td>27%</td><td>-12%</td><td>29%</td><td>33%</td><td>45%</td><td>-2%</td><td>44%</td><td>-7%</td><td>-22%</td><td>-22%</td><td>-19%</td></tr>
+ <tr><td><strong>Manufacturer Event % Sales Uplift</strong></td><td>39%</td><td>48%</td><td>84%</td><td>27%</td><td>131%</td><td>139%</td><td>39%</td><td>51%</td><td>60%</td><td>63%</td><td>29%</td><td>178%</td><td>163%</td><td>121%</td><td>142%</td><td>201%</td><td>59%</td><td>25%</td><td>40%</td><td>26%</td></tr>
+ <tr><td><strong>Manufacturer Incremental Gross Profit ($)</strong></td><td> (38,692)</td><td> 19,234 </td><td> 27,784 </td><td> 4,724 </td><td> 263,536 </td><td> 223,709 </td><td> 25,900 </td><td> (57,722)</td><td> 34,675 </td><td> 43,802 </td><td> (11,790)</td><td> 218,568 </td><td> 468,657 </td><td> 240,196 </td><td> (9,961)</td><td> 693,520 </td><td> (43,724)</td><td> (29,306)</td><td> (85,011)</td><td> (19,145)</td></tr>
+ <tr><td><strong>Manufacturer Incremental Revenue ($)</strong></td><td> 27,298 </td><td> 54,613 </td><td> 73,291 </td><td> 19,753 </td><td> 817,264 </td><td> 871,054 </td><td> 292,954 </td><td> 395,173 </td><td> 189,684 </td><td> 207,507 </td><td> 88,719 </td><td> 787,934 </td><td> 1,572,036 </td><td> 712,635 </td><td> 366,423 </td><td> 1,910,811 </td><td> 498,699 </td><td> 110,884 </td><td> 282,937 </td><td> 86,575 </td></tr>
+ <tr><td><strong>Manufacturer Incremental Volume (Units)</strong></td><td> 15,663 </td><td> 20,665 </td><td> 29,624 </td><td> 7,236 </td><td> 475,302 </td><td> 538,426 </td><td> 146,477 </td><td> 225,425 </td><td> 99,721 </td><td> 109,000 </td><td> 44,359 </td><td> 512,470 </td><td> 982,522 </td><td> 403,308 </td><td> 272,250 </td><td> 1,194,257 </td><td> 288,862 </td><td> 55,442 </td><td> 157,972 </td><td> 43,287 </td></tr>
+</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-xs-12">
+					<button class="btn btn-custom btn-block"><span class="fa fa-comments"></span> Add/View Comments</button>
+				</div>
+			</div>
+		</div>
+
+
+		<footer class="footer">
+			<div class="container-fluid">					
+				<div class="row">
+					<div class="col-sm-2">
+						<p class="text-muted">&copy; 2016 Ernst &amp; Young</p>
+					</div>
+					<div class="col-sm-2">
+						<p class="text-muted">Powered by Microsoft</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="lib/jquery/js/jquery-1.10.2.min.js"></script>
+
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="lib/fixed-table/js/fixed_table_rc.js"></script>
+
+		<script src="js/scripts.js"></script>		
+	</body>
+</html>
