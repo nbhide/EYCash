@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -115,7 +114,8 @@
 				</div>
 				<div class="btn-group btn-group-justified filtersbtn-group btn-group-justified filters hidden-xs">
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Country</span><b>- Select One -</b><span class="caret"></span>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+							aria-expanded="false"><span class="small">Country</span><b id="Country">- Select One -</b><span class="caret"></span>
 							</button>
 						<ul class="dropdown-menu" data-id="result1">
 							<li><a href="#">USA</a></li>
@@ -131,7 +131,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Category</span><b>- Select One -</b> <span class="caret"></span>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+							aria-expanded="false"><span class="small">Category</span><b id="Category">- Select One -</b> <span class="caret"></span>
 							</button>
 						<ul class="dropdown-menu" data-id="result2">
 							<li><a href="#">Alkaline</a></li>
@@ -143,7 +144,9 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Channel</span><b>- Select One -</b> <span class="caret"></span>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" 
+							aria-haspopup="true" aria-expanded="false"><span class="small">Channel</span>
+							<b id="Channel">- Select One -</b> <span class="caret"></span>
 							</button>
 						<ul class="dropdown-menu" data-id="result3">
 							<li><a href="#">Grocery</a></li>
@@ -156,7 +159,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Retailer</span><b>- Select One -</b> <span class="caret"></span>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+							aria-expanded="false"><span class="small">Retailer</span><b id="Retailer">- Select One -</b> <span class="caret"></span>
 							</button>
 						<ul class="dropdown-menu" data-id="result4">
 							<li><a href="#">Kroger</a></li>
@@ -166,7 +170,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">PPG</span><b>- Select One -</b><span class="caret"></span>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" 
+							aria-haspopup="true" aria-expanded="false"><span class="small">PPG</span><b id="PPG">- Select One -</b><span class="caret"></span>
 							</button>
 						<ul class="dropdown-menu" data-id="result5">
 							<li><a href="#">AA</a></li>
@@ -2833,6 +2838,44 @@
 	<script src="lib/fixed-table/js/fixed_table_rc.js"></script>
 
 	<script src="js/scripts.js"></script>
+
+ +	<script type="text/javascript">
+ +            function loadProducts(id) {
+ +                var country = document.getElementById('result1').innerHTML;
+ +                var retailer = document.getElementById('result4').innerHTML;
+ +                var channel = document.getElementById('result3').innerHTML;
+ +                var category = document.getElementById('result2').innerHTML;
+ +                var ppg = document.getElementById('result5').innerHTML;
+ +                document.getElementById(id).href += "?country=" + country + "&retailer=" + retailer + "&channel=" + channel + "&category=" + category + "&ppg=" + ppg;
+ +                //    var url = "MyPage2.html?passmonth=" + mymonth + "&passdate=" + myday + "&passyear=" + myyear;
+ +                //window.location.href = url;
+ +                //alert(url);
+ +                return false;
+ +            }
+ +        </script>
+ +        <script type="text/javascript">
+ +            function getUrlParams() {
+ +                var paramMap = {};
+ +                if (location.search.length == 0) {
+ +                    return paramMap;
+ +                }
+ +                var parts = location.search.substring(1).split("&");
+ +                for (var i = 0; i < parts.length; i++) {
+ +                    var component = parts[i].split("=");
+ +                    paramMap[decodeURIComponent(component[0])] = decodeURIComponent(component[1]);
+ +                }
+ +                return paramMap;
+ +            }
+ +            var params = getUrlParams();
+ +            //alert(params['passmonth']);
+ +            document.getElementById('result1').innerHTML = params["country"] === undefined ? "- Select One -" : params["country"];
+ +            document.getElementById('result2').innerHTML = params["category"] === undefined ? "- Select One -" : params["category"];
+ +            document.getElementById('result3').innerHTML = params["channel"] === undefined ? "- Select One -" : params["channel"];
+ +            document.getElementById('result4').innerHTML = params["retailer"] === undefined ? "- Select One -" : params["retailer"];
+ +            document.getElementById('result5').innerHTML = params["ppg"] === undefined ? "- Select One -" : params["ppg"];
+ +            //var url = "price-diagnostic.html?country=" + country + "&retailer=" + retailer + "&channel=" + channel + "&category=" + category + "&category=" + category;
+ +        </script>
+
 </body>
 
 </html>
