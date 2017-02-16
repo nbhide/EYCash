@@ -2832,6 +2832,45 @@
 	<script src="lib/fixed-table/js/fixed_table_rc.js"></script>
 
 	<script src="js/scripts.js"></script>
+	    
+    <script type="text/javascript">
+        function loadProducts(id){
+            var country = document.getElementById('Country').innerHTML;
+            var retailer = document.getElementById('Retailer').innerHTML;
+            var channel = document.getElementById('Channel').innerHTML;
+            var category = document.getElementById('Category').innerHTML;
+            var ppg = document.getElementById('PPG').innerHTML
+            document.getElementById(id).href += "?country=" + country + "&retailer=" + retailer + "&channel=" + channel + "&category=" + category + "&ppg=" + ppg;
+            //    var url = "MyPage2.html?passmonth=" + mymonth + "&passdate=" + myday + "&passyear=" + myyear;
+            //window.location.href = url;
+            //alert(url);
+           return false;
+        }
+    </script>
+    <script type="text/javascript">
+        function getUrlParams() {
+
+            var paramMap = {};
+            if (location.search.length == 0) {
+                return paramMap;
+            }
+            var parts = location.search.substring(1).split("&");
+
+            for (var i = 0; i < parts.length; i++) {
+                var component = parts[i].split("=");
+                paramMap[decodeURIComponent(component[0])] = decodeURIComponent(component[1]);
+            }
+            return paramMap;
+        }
+        var params = getUrlParams();
+        //alert(params['country']);
+        document.getElementById('Country').innerHTML = params["country"] === undefined ? "- Select One -" : params["country"];
+        document.getElementById('Category').innerHTML = params["category"] === undefined ? "- Select One -" : params["category"];
+        document.getElementById('Channel').innerHTML = params["channel"] === undefined ? "- Select One -" : params["channel"];
+        document.getElementById('Retailer').innerHTML = params["retailer"] === undefined ? "- Select One -" : params["retailer"];
+        document.getElementById('PPG').innerHTML = params["ppg"] === undefined ? "- Select One -" : params["ppg"];
+        //var url = "price-diagnostic.html?country=" + country + "&retailer=" + retailer + "&channel=" + channel + "&category=" + category + "&category=" + category;
+    </script>
 </body>
 
 </html>
