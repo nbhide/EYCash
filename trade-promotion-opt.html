@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -24,27 +25,27 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 	<link href="css/offcanvas.css" rel="stylesheet" type="text/css">
+	
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> -->
-
-	<!-- Include Date Range Picker -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-
-
-
-	<script>
-		$(function () {
-			$('input[name="daterange"]').daterangepicker();
-		});
-	</script>
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> -->
+ 
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  
+  
+  
+<script>
+	$(function() {
+		$('input[name="daterange"]').daterangepicker();
+	});
+  </script>
 </head>
 
 <body class="trade-promotion-opt">
@@ -113,9 +114,9 @@
 					</div>
 				</div>
 				<div class="btn-group btn-group-justified filtersbtn-group btn-group-justified filters hidden-xs">
-					<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="small">Country</span><b id="Country">- Select One -</b><span class="caret"></span>
-                        </button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Country</span><b>- Select One -</b><span class="caret"></span>
+							</button>
 						<ul class="dropdown-menu" data-id="result1">
 							<li><a href="#">USA</a></li>
 							<li><a href="#">UK</a></li>
@@ -130,9 +131,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="small">Category</span><b id="Category">- Select One -</b> <span class="caret"></span>
-                        </button>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Category</span><b>- Select One -</b> <span class="caret"></span>
+							</button>
 						<ul class="dropdown-menu" data-id="result2">
 							<li><a href="#">Alkaline</a></li>
 							<li><a href="#">Hearing Aid</a></li>
@@ -143,9 +143,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="small">Channel</span><b id="Channel">- Select One -</b> <span class="caret"></span>
-                        </button>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Channel</span><b>- Select One -</b> <span class="caret"></span>
+							</button>
 						<ul class="dropdown-menu" data-id="result3">
 							<li><a href="#">Grocery</a></li>
 							<li><a href="#">Drug</a></li>
@@ -157,9 +156,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="small">Retailer</span><b id="Retailer">- Select One -</b> <span class="caret"></span>
-                        </button>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">Retailer</span><b>- Select One -</b> <span class="caret"></span>
+							</button>
 						<ul class="dropdown-menu" data-id="result4">
 							<li><a href="#">Kroger</a></li>
 							<li><a href="#">Johnny Brothers</a></li>
@@ -168,9 +166,8 @@
 					</div>
 
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="small">PPG</span><b id="PPG">- Select One -</b><span class="caret"></span>
-                        </button>
+						<button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="small">PPG</span><b>- Select One -</b><span class="caret"></span>
+							</button>
 						<ul class="dropdown-menu" data-id="result5">
 							<li><a href="#">AA</a></li>
 							<li><a href="#">AAA</a></li>
@@ -183,24 +180,22 @@
 								<li><a href="#">Chocolate Crispy 16 oz </a></li-->
 						</ul>
 					</div>
-
-
-
+					
+					
+					
 					<div class="btn-group">
-						<button type="button" class="btn btn-custom dropdown-toggle collapsed" data-toggle="collapse" data-target="#dateRangePicker"
-							aria-expanded="false" aria-controls="dateRangePicker"><span class="small">Date Range Selector</span>&nbsp;<span class="hidden picked-date"><b>01/07/2015 - 06/20/2015</b></span><span
-								class="caret"></span>
+						<button type="button" class="btn btn-custom dropdown-toggle collapsed" data-toggle="collapse" data-target="#dateRangePicker" aria-expanded="false" aria-controls="dateRangePicker"><span class="small">Date Range Selector</span>&nbsp;<span class="hidden picked-date"><b>01/07/2015 - 06/20/2015</b></span><span class="caret"></span>
 							</button>
-
+							
 							<div class="collapse" id="dateRangePicker" data-id="result5">
-								<input id="datepicker" name="daterange" value="01/01/2015 - 01/31/2015" data-id="result6" />
-							</div>
-							<!-- <p class="collapse" id="dateRangePicker">Date: <input type="text" id="datepicker"></p> hidden picked-date-->
-
-
+								<input  id="datepicker" name="daterange" value="01/01/2015 - 01/31/2015" data-id="result6"/>
+							</div>	
+								<!-- <p class="collapse" id="dateRangePicker">Date: <input type="text" id="datepicker"></p> hidden picked-date-->
+								
+							
 					</div>
 				</div>
-
+				
 				<p class="pull-right visible-xs visible-sm">
 					<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Filters</button>
 				</p>
@@ -221,69 +216,69 @@
 							<div class="tab-pane fade in active" id="score">
 								<h3></h3>
 								<!--div class="panel panel-default"-->
-								<!-- Table centered -->
+								
 								<div class="row">
 									<div class=col-sm-2></div>
 									<div class=col-sm-8>
-										<div class="report">
+								<div class="report">
 
-											<div class="panel panel-default table-responsive">
-												<table class="table table-striped table-bordered table-condensed data-table">
-													<thead>
-														<tr>
-															<th colspan="2"><strong> Descriptives Information</strong></th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<th>Total Consumption Sales Volume (Units)</th>
-															<td>7,400,616</td>
-														</tr>
-														<tr>
-															<th>Total Manufacturer Revenue</th>
-															<td>$ 24,644,052</td>
-														</tr>
-														<tr>
-															<th>Total Manufacturer Trade Spend</th>
-															<td>$ 486,974</td>
-														</tr>
-														<tr>
-															<th>Weekly Average Base EPOS/Consumption Retail Sales Volume (Units)</th>
-															<td>60,731</td>
-														</tr>
-														<tr>
-															<th>Average Price to Consumer</th>
-															<td>$ 3.00</td>
-														</tr>
-														<tr>
-															<th>Average Base Price to Consumer</th>
-															<td>$ 3.47</td>
-														</tr>
-														<tr>
-															<th>Total Event*Weeks</th>
-															<td>73</td>
-														</tr>
-														<tr>
-															<th>Shipment Price to Retailer</th>
-															<td>$ 3.33</td>
-														</tr>
-														<tr>
-															<th>GP/Unit</th>
-															<td>$ 2.36</td>
-														</tr>
-														<tr>
-															<th>Promoted Shipment Price to Retailer</th>
-															<td>$ 2.74</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
+									<div class="panel panel-default table-responsive">
+											<table class="table table-striped table-bordered table-condensed data-table">
+												<thead>
+													<tr>
+														<th colspan="2"><strong> Descriptives Information</strong></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th>Total Consumption Sales Volume (Units)</th>
+														<td>7,400,616</td>
+													</tr>
+													<tr>
+														<th>Total Manufacturer Revenue</th>
+														<td>$ 24,644,052</td>
+													</tr>
+													<tr>
+														<th>Total Manufacturer Trade Spend</th>
+														<td>$ 486,974</td>
+													</tr>
+													<tr>
+														<th>Weekly Average Base EPOS/Consumption Retail Sales Volume (Units)</th>
+														<td>60,731</td>
+													</tr>
+													<tr>
+														<th>Average Price to Consumer</th>
+														<td>$ 3.00</td>
+													</tr>
+													<tr>
+														<th>Average Base Price to Consumer</th>
+														<td>$ 3.47</td>
+													</tr>
+													<tr>
+														<th>Total Event*Weeks</th>
+														<td>73</td>
+													</tr>
+													<tr>
+														<th>Shipment Price to Retailer</th>
+														<td>$ 3.33</td>
+													</tr>
+													<tr>
+														<th>GP/Unit</th>
+														<td>$ 2.36</td>
+													</tr>
+													<tr>
+														<th>Promoted Shipment Price to Retailer</th>
+														<td>$ 2.74</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
-
-									</div>
-									<div class=col-sm-2></div>
 								</div>
-
+								
+								</div>
+								<div class=col-sm-2></div>
+								</div>
+								
 								<div class="report invisible">
 
 									<table id="tpoScoreCardFilled">
@@ -2838,45 +2833,6 @@
 	<script src="lib/fixed-table/js/fixed_table_rc.js"></script>
 
 	<script src="js/scripts.js"></script>
-
-	<script type="text/javascript">
-		function loadProducts(id) {
-			var country = document.getElementById('Country').innerHTML;
-			var retailer = document.getElementById('Retailer').innerHTML;
-			var channel = document.getElementById('Channel').innerHTML;
-			var category = document.getElementById('Category').innerHTML;
-			var ppg = document.getElementById('PPG').innerHTML
-			document.getElementById(id).href += "?country=" + country + "&retailer=" + retailer + "&channel=" + channel + "&category=" + category + "&ppg=" + ppg;
-			//    var url = "MyPage2.html?passmonth=" + mymonth + "&passdate=" + myday + "&passyear=" + myyear;
-			//window.location.href = url;
-			//alert(url);
-			return false;
-		}
-	</script>
-	<script type="text/javascript">
-		function getUrlParams() {
-
-			var paramMap = {};
-			if (location.search.length == 0) {
-				return paramMap;
-			}
-			var parts = location.search.substring(1).split("&");
-
-			for (var i = 0; i < parts.length; i++) {
-				var component = parts[i].split("=");
-				paramMap[decodeURIComponent(component[0])] = decodeURIComponent(component[1]);
-			}
-			return paramMap;
-		}
-		var params = getUrlParams();
-		//alert(params['country']);
-		document.getElementById('Country').innerHTML = params["country"] === undefined ? "- Select One -" : params["country"];
-		document.getElementById('Category').innerHTML = params["category"] === undefined ? "- Select One -" : params["category"];
-		document.getElementById('Channel').innerHTML = params["channel"] === undefined ? "- Select One -" : params["channel"];
-		document.getElementById('Retailer').innerHTML = params["retailer"] === undefined ? "- Select One -" : params["retailer"];
-		document.getElementById('PPG').innerHTML = params["ppg"] === undefined ? "- Select One -" : params["ppg"];
-        //var url = "price-diagnostic.html?country=" + country + "&retailer=" + retailer + "&channel=" + channel + "&category=" + category + "&category=" + category;
-	</script>
 </body>
 
 </html>
